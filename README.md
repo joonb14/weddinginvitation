@@ -20,7 +20,7 @@ $ npm run deploy
 - Referecne: [[React] 프로젝트 GitHub Pages 배포하기](https://velog.io/@byjihye/react-github-pages)
 # Git 관리 전략
 - 작업은 아래 Naming 규약에 맞는 branch를 생성해서 
-- develop 브랜치에다 merge request!
+- **develop 브랜치에다 merge request!**
 ### Branch Name
 - feat/[기능개발관련키워드]
 - bugfix/[버그관련키워드]

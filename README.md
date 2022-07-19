@@ -1,5 +1,4 @@
 # React 개발 환경 설치
-### [Guide YouTube 영상](https://www.youtube.com/watch?v=txX3bL22esU&list=PLuHgQVnccGMCOGstdDZvH41x0Vtvwyxu7&index=2)
 ### 1. Node.js 설치
 - https://nodejs.org/ko/ 에서 LTS 버전 설치
 - 설명안읽고 설치 디렉토리만 원하는 위치로하고 다 Next & Install & Finish

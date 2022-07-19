@@ -7,7 +7,7 @@
 - 영상처럼 VS Code에서 Terminal을 실행해서 수행하는 걸 추천
 - **단, root부터 프로젝트를 다운로드할 디렉토리까지 대문자와 특문을 넣지 않아야함**
 ```console
-// 원하는 디렉토리에서. 
+// 원하는 디렉토리에서. ex) /c/web
 $ git clone https://github.com/joonb14/weddinginvitation.git
 $ cd weddinginvitation
 $ npm start

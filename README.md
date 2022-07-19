@@ -10,6 +10,7 @@
 // 원하는 디렉토리에서. ex) /c/web
 $ git clone https://github.com/joonb14/weddinginvitation.git
 $ cd weddinginvitation
+$ npm install
 $ npm start
 ```
 # Github Page에 React App 배포

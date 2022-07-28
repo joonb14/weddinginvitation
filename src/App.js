@@ -18,7 +18,7 @@ function Header() {
 function Gallery() {
   return (
     <div className="Gallery">
-
+      <p>commit test</p>
     </div>
   );
 }

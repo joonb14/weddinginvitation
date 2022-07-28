@@ -10,19 +10,44 @@ import { ReactComponent as Content4 } from './assets/content4.svg';
 import './assets/style.css';
 import './assets/reset.css';
 
+/* @bravoyourlif */
 function Header() {
   return (
-    <div className="Header"></div>
+    <div className="Header">
+
+    </div>
   );
 }
 
-function Footer() {
+/* @yeokyeong46 */
+function Gallery() {
   return (
-    <div className="Footer"></div>
+    <div className="Gallery">
+
+    </div>
   );
 }
 
-function SvgContent(props){
+/* @ */
+function Map() {
+  return (
+    <div className="Map">
+
+    </div>
+  );
+}
+
+/* @ */
+function DashBoard() {
+  return (
+    <div className="DashBoard">
+
+    </div>
+  );
+}
+
+/* @joonb14 */
+function SvgImage(props){
 
   /* TODO
   const pathObjects = props.pathObjects
@@ -32,7 +57,7 @@ function SvgContent(props){
   */
 
   return (
-    <div className="SvgContent">
+    <div className="SvgImage">
       <div className="content1">
         <Content1></Content1>
       </div>
@@ -93,8 +118,10 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <SvgContent></SvgContent>
-      <Footer></Footer>
+      <SvgImage></SvgImage>
+      <Gallery></Gallery>
+      <Map></Map>
+      <DashBoard></DashBoard>
     </div>
   );
 }

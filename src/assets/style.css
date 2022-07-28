@@ -56,3 +56,67 @@
     transform: translate3d(0, 40px, 0);
   }
 }
+
+
+/* swiper.js for gallery */
+.swiper {
+  width: 500px;
+  height: 300px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet { 
+  width: 5px; 
+  height: 5px; 
+  background: transparent; 
+  border: 1px solid grey; 
+  opacity: 1; 
+}
+
+.swiper-pagination-bullet-active { 
+  width: 6px; 
+  height: 6px; 
+  background: grey; 
+  border: 1px solid grey; 
+  opacity: 1; 
+}
+
+.swiper-button-prev {
+  color: grey;
+}
+
+.swiper-button-next {
+  background: url(img/rightArrow.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after{
+  display: none;
+}

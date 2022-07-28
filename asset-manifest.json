@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/weddinginvitation/static/css/main.a05bc8ed.css",
-    "main.js": "/weddinginvitation/static/js/main.5037617b.js",
+    "main.css": "/weddinginvitation/static/css/main.5fab8c2e.css",
+    "main.js": "/weddinginvitation/static/js/main.1345a07a.js",
     "static/js/787.4ff3cea1.chunk.js": "/weddinginvitation/static/js/787.4ff3cea1.chunk.js",
     "static/media/newzealand.png": "/weddinginvitation/static/media/newzealand.22ef2ed55cab41167862.png",
     "static/media/wedding.jpeg": "/weddinginvitation/static/media/wedding.f6372b2e7986cbbae20f.jpeg",
     "static/media/content2.svg": "/weddinginvitation/static/media/content2.b2f63dab046f513b4f9d7ca20d70ab8b.svg",
-    "static/media/wedding.svg": "/weddinginvitation/static/media/wedding.23d692000a44d06cb4071135ca4beec3.svg",
+    "static/media/wedding.svg": "/weddinginvitation/static/media/wedding.45275fe81bec599da9dc5212c0ccf577.svg",
     "static/media/content4.svg": "/weddinginvitation/static/media/content4.44074c1de21c46c31bd361fab9163530.svg",
     "static/media/content3.svg": "/weddinginvitation/static/media/content3.90356b87262cc616b7ed08ae355459b9.svg",
     "index.html": "/weddinginvitation/index.html",
-    "main.a05bc8ed.css.map": "/weddinginvitation/static/css/main.a05bc8ed.css.map",
-    "main.5037617b.js.map": "/weddinginvitation/static/js/main.5037617b.js.map",
+    "main.5fab8c2e.css.map": "/weddinginvitation/static/css/main.5fab8c2e.css.map",
+    "main.1345a07a.js.map": "/weddinginvitation/static/js/main.1345a07a.js.map",
     "787.4ff3cea1.chunk.js.map": "/weddinginvitation/static/js/787.4ff3cea1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a05bc8ed.css",
-    "static/js/main.5037617b.js"
+    "static/css/main.5fab8c2e.css",
+    "static/js/main.1345a07a.js"
   ]
 }

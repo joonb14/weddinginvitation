@@ -1,17 +1,17 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-import './assets/style.css';
+import './assets/styleForGallery.css';
 
 /* @yeokyeong46 */
 function Content(props){
   return (
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="assets/img/sample1.png"></img></div>
-          <div class="swiper-slide"><img src="assets/img/sample2.png"></img></div>
-          <div class="swiper-slide"><img src="assets/img/sample3.png"></img></div>
-          <div class="swiper-slide"><img src="assets/img/sample4.png"></img></div>
-          <div class="swiper-slide"><img src="assets/img/sample5.png"></img></div>
+          <div class="swiper-slide"><img src="./assets/img/sample1.png" /></div>
+          <div class="swiper-slide"><img src="./assets/img/sample2.png" /></div>
+          <div class="swiper-slide"><img src="./assets/img/sample3.png" /></div>
+          <div class="swiper-slide"><img src="./assets/img/sample4.png" /></div>
+          <div class="swiper-slide"><img src="./assets/img/sample5.png" /></div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>

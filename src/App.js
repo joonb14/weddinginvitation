@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SvgImage from './SvgImage';
+import Gallery from './Gallery';
 
 import './assets/style.css';
 import './assets/reset.css';
@@ -9,16 +10,6 @@ import './assets/reset.css';
 function Header() {
   return (
     <div className="Header">
-
-    </div>
-  );
-}
-
-/* @yeokyeong46 */
-function Gallery() {
-  return (
-    <div className="Gallery">
-
     </div>
   );
 }

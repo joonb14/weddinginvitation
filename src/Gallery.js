@@ -5,17 +5,17 @@ import './assets/styleForGallery.css';
 /* @yeokyeong46 */
 function Content(props){
   return (
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./assets/img/sample1.png" /></div>
-          <div class="swiper-slide"><img src="./assets/img/sample2.png" /></div>
-          <div class="swiper-slide"><img src="./assets/img/sample3.png" /></div>
-          <div class="swiper-slide"><img src="./assets/img/sample4.png" /></div>
-          <div class="swiper-slide"><img src="./assets/img/sample5.png" /></div>
+      <div className="swiper">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide"><img src="./assets/img/sample1.png" /></div>
+          <div className="swiper-slide"><img src="./assets/img/sample2.png" /></div>
+          <div className="swiper-slide"><img src="./assets/img/sample3.png" /></div>
+          <div className="swiper-slide"><img src="./assets/img/sample4.png" /></div>
+          <div className="swiper-slide"><img src="./assets/img/sample5.png" /></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-pagination"></div>
       </div>
   );
 }

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { ReactDOM } from 'react';
+import React from 'react';
 
 import './assets/snow.css';
 import petalImg from './assets/petal.png'
@@ -29,20 +28,20 @@ function DrawPetal(props) {
   const position = "absolute"
   for(let i = 0; i < count; i++) {
     const blowAnimation = blowAnimations[Math.floor(Math.random() * blowAnimations.length)];
-    const swayAnimation = swayAnimations[Math.floor(Math.random() * swayAnimations.length)];
+    //const swayAnimation = swayAnimations[Math.floor(Math.random() * swayAnimations.length)];
     const fallTime = (Math.round(document.documentElement.scrollHeight * 0.007) + Math.random() * 5) * 3;
 
     let animationDelay = `${(Math.random() * 16).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
 
-    animation = 'fall ' + fallTime + 's linear 0s 1' + ', ' +
-    blowAnimation + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + getRandomInt(0, 20)) + 's linear 0s infinite' + ', ' +
-    swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';;
+    animation = 'fall ' + fallTime + 's linear 0s 1, ' +
+    blowAnimation + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + getRandomInt(0, 20)) + 's linear 0s infinite';
+    //swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';
     const left = Math.random()*document.documentElement.scrollWidth;
     let style = {
       animation,
       animationDelay,
       position,
-      left
+      left,
     }
     petals.push(<Snowflake key={i} id={i} style={style}/>);
   }

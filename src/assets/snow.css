@@ -1,11 +1,16 @@
 
+.html, body {
+	overflow-x: hidden;
+}
+
+
 .Snowflake {
 	display: flex;
 	justify-content: space-between;
-	width: 2%;
 	opacity: 0;
 	margin: 0;
 	padding: 0;
+	position: absolute;
 }
 /* 
 @keyframes fall {
@@ -28,12 +33,21 @@
 
 @keyframes fall {
     0% {
-        opacity: 1;
+		opacity: 0;
         top: 0
     }
+	3% {
+		opacity: 0.9;
+        top: 3%
+	}
+
+	90% {
+		opacity: 0.6;
+        top: 90%
+	}
     100% {
-        opacity: 0.2;
-		transform: translate(0, 97vh);
+		opacity: 0.2;
+		top: 100%;
     }
 }
 
@@ -198,6 +212,7 @@
         transform: rotate(82deg)
     }
 }
+
 /* 
 .sakura {
     background: -webkit-linear-gradient(120deg, rgba(255, 183, 197, 0.9), rgba(255, 197, 208, 0.9));

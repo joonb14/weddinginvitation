@@ -25,23 +25,34 @@ function DrawPetal(props) {
   let animation;
   const swayAnimations = ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
   const blowAnimations = ['blow-soft-left', 'blow-medium-left', 'blow-hard-left', 'blow-soft-right', 'blow-medium-right', 'blow-hard-right']
-  const position = "absolute"
+
+
+  const documentWidth = document.documentElement.scrollWidth;
+  const documentHeight = document.documentElement.scrollHeight;
+
   for(let i = 0; i < count; i++) {
     const blowAnimation = blowAnimations[Math.floor(Math.random() * blowAnimations.length)];
-    //const swayAnimation = swayAnimations[Math.floor(Math.random() * swayAnimations.length)];
-    const fallTime = (Math.round(document.documentElement.scrollHeight * 0.007) + Math.random() * 5) * 3;
-
-    let animationDelay = `${(Math.random() * 16).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
+    const swayAnimation = swayAnimations[Math.floor(Math.random() * swayAnimations.length)];
+    const fallTime = (5 + Math.random() * 5) * 3;
+    const width = (15 + Math.random() * 0.4);
+    const height = (15 + Math.random() * 0.4);
+    const top = -(width > height ? width : height) - 1;
+    //const opacity = 0.7 + Math.random() * 0.3;
+    let animationDelay = `${(Math.random() * 100).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
 
     animation = 'fall ' + fallTime + 's linear 0s 1, ' +
-    blowAnimation + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + getRandomInt(0, 20)) + 's linear 0s infinite';
-    //swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';
-    const left = Math.random()*document.documentElement.scrollWidth;
+    blowAnimation + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + getRandomInt(0, 20)) + 's linear 0s infinite, '
+    + swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';
+    const left = Math.random()*document.documentElement.scrollWidth - width - 1;
+
     let style = {
       animation,
       animationDelay,
-      position,
+      top,
       left,
+      width,
+      height,
+      //opacity,
     }
     petals.push(<Snowflake key={i} id={i} style={style}/>);
   }

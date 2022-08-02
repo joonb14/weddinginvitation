@@ -24,11 +24,11 @@ function DrawPetal(props) {
   let petals = []
   let animation;
   const swayAnimations = ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
-  const blowAnimations = ['blow-soft-left', 'blow-medium-left', 'blow-hard-left', 'blow-soft-right', 'blow-medium-right', 'blow-hard-right']
+  const blowAnimations = ['blow-soft-left', 'blow-medium-left', 'blow-hard-left'] //, 'blow-soft-right', 'blow-medium-right', 'blow-hard-right']
 
 
   const documentWidth = document.documentElement.scrollWidth;
-  const documentHeight = document.documentElement.scrollHeight;
+  // const documentHeight = document.documentElement.scrollHeight;
 
   for(let i = 0; i < count; i++) {
     const blowAnimation = blowAnimations[Math.floor(Math.random() * blowAnimations.length)];
@@ -43,8 +43,7 @@ function DrawPetal(props) {
     animation = 'fall ' + fallTime + 's linear 0s 1, ' +
     blowAnimation + ' ' + (((fallTime > 30 ? fallTime : 30) - 20) + getRandomInt(0, 20)) + 's linear 0s infinite, '
     + swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';
-    const left = Math.random()*document.documentElement.scrollWidth - width - 1;
-
+    const left = Math.random()*documentWidth - width - 1;
     let style = {
       animation,
       animationDelay,

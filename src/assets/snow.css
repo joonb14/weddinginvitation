@@ -1,9 +1,4 @@
 
-.html, body {
-	overflow-x: hidden;
-}
-
-
 .Snowflake {
 	display: flex;
 	justify-content: space-between;

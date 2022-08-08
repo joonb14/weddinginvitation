@@ -1,0 +1,9 @@
+
+.Snowflake {
+	display: flex;
+	justify-content: space-between;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}

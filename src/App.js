@@ -2,6 +2,7 @@ import React from 'react';
 
 import SvgImage from './SvgImage';
 import Gallery from './Gallery';
+import PetalBlowing from './PetalBlowing'
 
 import './assets/style.css';
 import './assets/reset.css';
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <PetalBlowing></PetalBlowing>
       <SvgImage></SvgImage>
       <Gallery></Gallery>
       <Map></Map>

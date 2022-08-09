@@ -22,21 +22,24 @@ function Snowflake(props) {
 
 function DrawPetal(props) {
   const count = props.count;
-  let petals = []
+  let petals = [];
 
   const documentWidth = document.documentElement.scrollWidth;
   const documentHeight = document.documentElement.scrollHeight;
 
   for(let i = 0; i < count; i++) {
-    const width = (15 + Math.random() * 0.4);
-    const height = (15 + Math.random() * 0.4);
-    const maxRate = (width > height ? width / documentWidth : height / documentHeight) * 100;
+    let iniTop = Math.random() * 100;
+    if(iniTop < 40) iniTop /= 4;
+    else if (iniTop < 80) iniTop = iniTop * 7 / 4 - 60;
+    const width = (10 + Math.random() * 6);
+    const height = (10 + Math.random() * 6);
+    const maxRate = (width / documentWidth > height / documentHeight ? width / documentWidth : height / documentHeight) * 100;
     const margin = maxRate * 2;
-    const top = -margin;
+    const top = -margin + iniTop;
     let left;
 
     let finalLeft;
-    let finalBottom = 100;
+    let finalBottom = 100 + iniTop;
 
     if(Math.random() < 0.5) // 오른쪽방향
     {
@@ -136,7 +139,7 @@ function DrawPetal(props) {
 
     const PetalImg = styled.img`
       animation-name: ${newPetalAnimation};
-      animation-duration: ${finalBottom / 3}s;
+      animation-duration: ${(finalBottom - iniTop) / 3}s;
       animation-delay: ${animationDelay};
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -153,6 +156,6 @@ function DrawPetal(props) {
 
 export default function PetalBlowing() {
   return (
-    <DrawPetal count={300}></DrawPetal>
+    <DrawPetal count={100}></DrawPetal>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import SvgImage from './SvgImage';
+import SvgContent from './SvgContent';
 import Gallery from './Gallery';
 import PetalBlowing from './PetalBlowing'
 
-import './assets/style.css';
 import './assets/reset.css';
+import './assets/style.css';
 
 /* @bravoyourlif */
 function Header() {
@@ -19,6 +19,15 @@ function Header() {
 function Map() {
   return (
     <div className="Map">
+
+    </div>
+  );
+}
+
+/* @ */
+function Calendar() {
+  return (
+    <div className="Calendar">
 
     </div>
   );
@@ -39,11 +48,12 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <PetalBlowing></PetalBlowing>
-      <SvgImage></SvgImage>
+      <SvgContent></SvgContent>
       <Gallery></Gallery>
+      <Calendar></Calendar>
       <Map></Map>
       <DashBoard></DashBoard>
+      <PetalBlowing></PetalBlowing>
     </div>
   );
 }

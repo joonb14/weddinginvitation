@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&family=Pacifico&display=swap");
 
-.content1 {
+.svg1 {
   background-image: url("./wedding.jpeg");
   overflow: auto;
   background-repeat: no-repeat;
@@ -14,27 +14,12 @@
   stroke-width: 3px;
 }
 
-.content2 {
+.svg2 {
   background-color: #f1f1f1;
-}
-
-.content3 {
-  background-color: #000;
 }
 
 .path2 {
   stroke: #000;
-}
-
-.content3 {
-  background-image: url("./newzealand.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.content4 {
-  background-color: #1a1a1a;
 }
 
 .footer {

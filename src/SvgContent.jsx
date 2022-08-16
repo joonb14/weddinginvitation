@@ -1,18 +1,17 @@
 import React, { useEffect, useContext } from 'react';
 
 import { Context } from './Context';
+import Content from './Content'
 
-import { ReactComponent as Content1 } from './assets/wedding.svg';
-import { ReactComponent as Content2 } from './assets/content2.svg';
-import { ReactComponent as Content3 } from './assets/content3.svg';
-import { ReactComponent as Content4 } from './assets/content4.svg';
+import { ReactComponent as Svg1 } from './assets/wedding.svg';
+import { ReactComponent as Svg2 } from './assets/content2.svg';
 
 import './assets/style.css';
 import './assets/reset.css';
 
 
 /* @joonb14 */
-function Content(props){
+function SvgContents(props){
 
   /* TODO
   const pathObjects = props.pathObjects
@@ -22,18 +21,13 @@ function Content(props){
   */
 
   return (
-    <div className="Content">
-      <div className="content1">
-        <Content1></Content1>
+    <div className="SvgContents">
+      <div className="svg1">
+        <Svg1></Svg1>
       </div>
-      <div className="content2">
-        <Content2></Content2>
-      </div>
-      <div className="content3">
-        <Content3></Content3>
-      </div>
-      <div className="content4">
-        <Content4></Content4>
+      <Content></Content>
+      <div className="svg2">
+        <Svg2></Svg2>
       </div>
     </div>
   );
@@ -72,7 +66,7 @@ function InitScrollHandler(props){
   window.addEventListener('scroll', scrollHandler)
 }
 
-function SvgImage() {
+function SvgContent() {
 
   const context = useContext(Context);
 
@@ -82,9 +76,9 @@ function SvgImage() {
 
   return (
     <div className="SvgImage">
-      <Content></Content>
+      <SvgContents></SvgContents>
     </div>
   );
 }
 
-export default SvgImage;
+export default SvgContent;

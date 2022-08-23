@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/weddinginvitation/static/css/main.5c4da00f.css",
-    "main.js": "/weddinginvitation/static/js/main.6ef5ce31.js",
+    "main.css": "/weddinginvitation/static/css/main.443289d4.css",
+    "main.js": "/weddinginvitation/static/js/main.a45ab8f5.js",
     "static/media/wedding.jpeg": "/weddinginvitation/static/media/wedding.f6372b2e7986cbbae20f.jpeg",
     "static/media/sample6.png": "/weddinginvitation/static/media/sample6.82a6065ffbdd614cd5f7.png",
-    "static/media/sample1.png": "/weddinginvitation/static/media/sample1.38bd7f3c150da0b017da.png",
     "static/media/sample2.png": "/weddinginvitation/static/media/sample2.2265d62ad1f7ef54ab22.png",
     "static/media/sample5.png": "/weddinginvitation/static/media/sample5.bb3357f067bcc1cdccb5.png",
     "static/media/sample3.png": "/weddinginvitation/static/media/sample3.b5839938ad0f8175a883.png",
     "static/media/sample4.png": "/weddinginvitation/static/media/sample4.21daeba1af6e7bf36867.png",
+    "static/media/textanimation.svg": "/weddinginvitation/static/media/textanimation.9ca1a9e7a10716721d526e0f32b66983.svg",
     "static/media/content2.svg": "/weddinginvitation/static/media/content2.b2f63dab046f513b4f9d7ca20d70ab8b.svg",
     "static/media/wedding.svg": "/weddinginvitation/static/media/wedding.45275fe81bec599da9dc5212c0ccf577.svg",
     "index.html": "/weddinginvitation/index.html",
-    "main.5c4da00f.css.map": "/weddinginvitation/static/css/main.5c4da00f.css.map",
-    "main.6ef5ce31.js.map": "/weddinginvitation/static/js/main.6ef5ce31.js.map"
+    "main.443289d4.css.map": "/weddinginvitation/static/css/main.443289d4.css.map",
+    "main.a45ab8f5.js.map": "/weddinginvitation/static/js/main.a45ab8f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c4da00f.css",
-    "static/js/main.6ef5ce31.js"
+    "static/css/main.443289d4.css",
+    "static/js/main.a45ab8f5.js"
   ]
 }

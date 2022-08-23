@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&family=Pacifico&display=swap");
+
+.HeaderContent {
+	background-color: bisque;
+}
+
+path {
+	stroke-dasharray: var(--length);
+	stroke-dashoffset: var(--length);
+}
+
+svg {
+	fill: none;
+	stroke-width: 10px;
+	stroke-linecap: round;
+}
+
+
+.svg-bg > path {
+	stroke: #FFF;
+	animation: path var(--duration) ease forwards;
+	animation-delay: var(--delay);
+}
+
+.svg-main > path {
+	stroke: #000;
+	animation: path var(--duration) ease-in forwards;
+	animation-delay: var(--delay);
+}
+
+@keyframes path {
+	100% { stroke-dashoffset: 0; }
+}

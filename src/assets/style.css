@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .svg1 {
   background-image: url("./wedding.jpeg");
@@ -42,4 +43,6 @@
   }
 }
 
-
+@keyframes path {
+	100% { stroke-dashoffset: 0; }
+}

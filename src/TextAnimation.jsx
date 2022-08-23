@@ -38,7 +38,7 @@ export default function Header(props) {
 
     useEffect(() => {
       ClipSVG();
-    })
+    }) 
 
     return (
       <div className="Header">

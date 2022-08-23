@@ -1,7 +1,7 @@
 import ImageGallery from 'react-image-gallery';
 import "./assets/styleForGallery.css";
 
-import sample1 from "./assets/img/sample1.png";
+//import sample1 from "./assets/img/sample1.png";
 import sample2 from "./assets/img/sample2.png";
 import sample3 from "./assets/img/sample3.png";
 import sample4 from "./assets/img/sample4.png";

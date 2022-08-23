@@ -1,18 +1,18 @@
 import React, {useEffect} from 'react';
 
-/*import './assets/textanimation.css'*/
-import './assets/style.css';
 import './assets/reset.css';
+import './assets/textanimation.css';
 
 import { ReactComponent as TextSVG } from './assets/textanimation.svg';
 
 /* @bravoyourlif */
-function SVGcontent(props) {
+function HeaderContent(props) {
 
-  return <div className="SVGcontent">
-    <TextSVG></TextSVG>
-    <ClipSVG></ClipSVG>
-  </div>
+  return (
+    <div className="HeaderContent">
+      <TextSVG></TextSVG>
+    </div>
+  );
 }
 
 function ClipSVG(props) {
@@ -23,18 +23,14 @@ function ClipSVG(props) {
     const mainGroup = document.querySelector('.svg-main')
     const mainPaths = mainGroup.querySelectorAll('path')
     Animate(mainPaths)
-
-    return <div className="ClipSVG">
-      <ClipSVG></ClipSVG>
-    </div>
 }
 
 function Animate(paths) {
   paths.forEach((path, index) => {
     const length = path.getTotalLength()
     path.style.setProperty('--length', length)
-    path.style.setProperty('--delay', index * 10 + 'ms')
-    path.style.setProperty('--duration', length * 1.5 + 'ms')
+    path.style.setProperty('--delay', index * 200 + 'ms')
+    path.style.setProperty('--duration', length * 100 + 'ms')
   }) 
 }
 
@@ -46,7 +42,7 @@ export default function Header(props) {
 
     return (
       <div className="Header">
-        <SVGcontent></SVGcontent>
+        <HeaderContent></HeaderContent>
       </div>
     );
 }

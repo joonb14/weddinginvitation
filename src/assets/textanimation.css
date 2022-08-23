@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&family=Pacifico&display=swap");
 
-html, body {
-  background-color: #f1f1f1;
-  font-family: monospace;
+.HeaderContent {
+	background-color: bisque;
 }
 
+path {
+	stroke-dasharray: var(--length);
+	stroke-dashoffset: var(--length);
+}
 
 svg {
 	fill: none;
@@ -12,11 +15,6 @@ svg {
 	stroke-linecap: round;
 }
 
-path {
-	stroke-dasharray: var(--length);
-	stroke-dashoffset: var(--length);
-
-}
 
 .svg-bg > path {
 	stroke: #FFF;
@@ -29,7 +27,6 @@ path {
 	animation: path var(--duration) ease-in forwards;
 	animation-delay: var(--delay);
 }
-
 
 @keyframes path {
 	100% { stroke-dashoffset: 0; }

@@ -3,3 +3,7 @@
 .image-gallery-slides {
   height: 1500px;
 }
+
+.image-gallery-svg {
+  stroke-width: 1;
+}

@@ -2,18 +2,11 @@ import React from 'react';
 
 import SvgImage from './SvgImage';
 import Gallery from './Gallery';
-import PetalBlowing from './PetalBlowing'
+import PetalBlowing from './PetalBlowing';
+import Header from './TextAnimation';
 
 import './assets/style.css';
 import './assets/reset.css';
-
-/* @bravoyourlif */
-function Header() {
-  return (
-    <div className="Header">
-    </div>
-  );
-}
 
 /* @ */
 function Map() {

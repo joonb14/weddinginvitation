@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html, body {
+  background-color: #f1f1f1;
+  font-family: monospace;
+}
+
+
+svg {
+	fill: none;
+	stroke-width: 10px;
+	stroke-linecap: round;
+}
+
+path {
+	stroke-dasharray: var(--length);
+	stroke-dashoffset: var(--length);
+
+}
+
+.svg-bg > path {
+	stroke: #FFF;
+	animation: path var(--duration) ease forwards;
+	animation-delay: var(--delay);
+}
+
+.svg-main > path {
+	stroke: #000;
+	animation: path var(--duration) ease-in forwards;
+	animation-delay: var(--delay);
+}
+
+
+@keyframes path {
+	100% { stroke-dashoffset: 0; }
+}

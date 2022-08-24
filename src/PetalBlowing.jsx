@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { createRoot } from 'react-dom/client'
 import styled, {keyframes} from "styled-components"
 
 import './assets/snow.css';
@@ -20,12 +21,14 @@ function Snowflake(props) {
 //   return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
 
-function DrawPetal(props) {
+function Petal(props) {
   const count = props.count;
   let petals = [];
 
   const documentWidth = document.documentElement.scrollWidth;
   const documentHeight = document.documentElement.scrollHeight;
+  console.log("documentWidth: "+documentWidth);
+  console.log("documentHeight: "+documentHeight);
 
   for(let i = 0; i < count; i++) {
     let iniTop = Math.random() * 100;
@@ -154,8 +157,25 @@ function DrawPetal(props) {
   return petals
 }
 
-export default function PetalBlowing() {
-  return (
-    <DrawPetal count={100}></DrawPetal>
-  )
+function DrawPetals() {
+
+  return(
+    <Petal count={100}></Petal> 
+  );
 }
+
+function PetalBlowing() {
+
+
+  useEffect(() => {
+    const element = document.getElementById("Petals");
+    const root = createRoot(element);
+    root.render(<DrawPetals/>)
+  });
+
+  return (
+    <div id='Petals' className="Petals"></div> 
+  );
+}
+
+export default PetalBlowing;

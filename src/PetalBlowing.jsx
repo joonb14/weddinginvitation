@@ -49,67 +49,27 @@ function Petal(props) {
       left = Math.random()*90 - margin;
       finalLeft = left;
       const speedOption = Math.random();
-      if(speedOption < 1/3)
-      {
-        finalLeft += 150;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin) / 150 * 100;
-          finalLeft = 100 - margin;
-        }
-      }
-      else if(speedOption < 2/3)
-      {
-        finalLeft += 100;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin);
-          finalLeft = 100 - margin;
-        }
-      }
-      else
-      {
-        finalLeft += 50;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin) * 2;
-          finalLeft = 100 - margin;
-        }
-      }
+
+      if(speedOption < 1/3) finalLeft += 150;
+      else if(speedOption < 2/3) finalLeft += 100;
+      else finalLeft += 50;
+
+      if(finalLeft > 100 - margin) finalLeft = 100 - margin;
     }
     else  // 왼쪽방향
     {
       left = Math.random()*90 + 10 - margin;
       finalLeft = left;
       const speedOption = Math.random();
-      if(speedOption < 1/3)
-      {
-        finalLeft -= 150;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft / 150 * 100;
-          finalLeft = 0;
-        }
-      }
-      else if(speedOption < 2/3)
-      {
-        finalLeft -= 100;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft;
-          finalLeft = 0;
-        }
-      }
-      else
-      {
-        finalLeft -= 50;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft * 2;
-          finalLeft = 0;
-        }
-      }
+      
+      if(speedOption < 1/3) finalLeft -= 150;
+      else if(speedOption < 2/3) finalLeft -= 100;
+      else finalLeft -= 50;
+
+      if(finalLeft < 0) finalLeft = 0;
     }
+
+    finalBottom = documentHeight;
 
     const startTheta = Math.random() * 100 - 5;
     const middleTheta = Math.random() * 109 + 28;
@@ -119,9 +79,9 @@ function Petal(props) {
         top: ${top}%;
         left: ${left}%;
         transform: rotate(${startTheta}deg);
-        opacity: 0;
+        opacity: 0.5;
       }
-      3% {
+      1% {
         opacity: 0.9;
       }
       40% {
@@ -132,7 +92,7 @@ function Petal(props) {
       }
       100% {
         left: ${finalLeft}%;
-        top: ${finalBottom}%;
+        top: ${finalBottom}px;
         transform: rotate(${endTheta}deg);
         opacity: 0.1;
       }
@@ -142,7 +102,7 @@ function Petal(props) {
 
     const PetalImg = styled.img`
       animation-name: ${newPetalAnimation};
-      animation-duration: ${(finalBottom - iniTop) / 3}s;
+      animation-duration: ${(finalBottom - iniTop) / 300}s;
       animation-delay: ${animationDelay};
       animation-iteration-count: infinite;
       animation-timing-function: linear;

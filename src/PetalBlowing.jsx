@@ -17,10 +17,6 @@ function Snowflake(props) {
   )
 }
 
-// function getRandomInt(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
 function Petal(props) {
   const count = props.count;
   let petals = [];
@@ -28,11 +24,9 @@ function Petal(props) {
   const browserHeight = document.documentElement.clientHeight;
   const documentWidth = document.documentElement.scrollWidth;
   const documentHeight = document.documentElement.scrollHeight;
-  console.log("documentWidth: "+documentWidth);
-  console.log("documentHeight: "+documentHeight);
 
   const heightRate = documentHeight / browserHeight * 100;
-console.log(heightRate)
+
   for(let i = 0; i < count; i++) {
     let iniTop = Math.random() * heightRate;
     if(iniTop < 70) iniTop /= 2;
@@ -53,32 +47,27 @@ console.log(heightRate)
       finalLeft = left;
       const speedOption = Math.random();
 
+      let minusVal;
       if(speedOption < 1/3)
       {
         finalLeft += 150;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin) / 150 * 100;
-          finalLeft = 100 - margin;
-        }
+        minusVal = (finalLeft - 100 + margin) / 150 * 100;
       }
       else if(speedOption < 2/3)
       {
         finalLeft += 100;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin);
-          finalLeft = 100 - margin;
-        }
+        minusVal = (finalLeft - 100 + margin);
       }
       else
       {
         finalLeft += 50;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin) * 2;
-          finalLeft = 100 - margin;
-        }
+        minusVal = (finalLeft - 100 + margin) * 2;
+      }
+
+      if(finalLeft > 100 - margin)
+      {
+        finalBottom -= minusVal // 각도 유지를 하면서 떨어지게 하기 위함
+        finalLeft = 100 - margin;
       }
     }
     else  // 왼쪽방향
@@ -87,32 +76,27 @@ console.log(heightRate)
       finalLeft = left;
       const speedOption = Math.random();
       
+      let plusVal;
       if(speedOption < 1/3)
       {
         finalLeft -= 150;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft / 150 * 100;
-          finalLeft = 0;
-        }
+        plusVal = finalLeft / 150 * 100;
       }
       else if(speedOption < 2/3)
       {
         finalLeft -= 100;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft;
-          finalLeft = 0;
-        }
+        plusVal = finalLeft;
       }
       else
       {
         finalLeft -= 50;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft * 2;
-          finalLeft = 0;
-        }
+        plusVal = finalLeft * 2;
+      }
+
+      if(finalLeft < 0)
+      {
+        finalBottom += plusVal; // 각도 유지를 하면서 떨어지게 하기 위함
+        finalLeft = 0;
       }
     }
 
@@ -165,7 +149,7 @@ console.log(heightRate)
 function DrawPetals() {
 
   return(
-    <Petal count={100}></Petal> 
+    <Petal count={100}></Petal> // 개수가 너무 많으면 Out of Memory
   );
 }
 

@@ -17,23 +17,20 @@ function Snowflake(props) {
   )
 }
 
-// function getRandomInt(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
 function Petal(props) {
   const count = props.count;
   let petals = [];
 
+  const browserHeight = document.documentElement.clientHeight;
   const documentWidth = document.documentElement.scrollWidth;
   const documentHeight = document.documentElement.scrollHeight;
-  console.log("documentWidth: "+documentWidth);
-  console.log("documentHeight: "+documentHeight);
+
+  const heightRate = documentHeight / browserHeight * 100;
 
   for(let i = 0; i < count; i++) {
-    let iniTop = Math.random() * 100;
-    if(iniTop < 40) iniTop /= 4;
-    else if (iniTop < 80) iniTop = iniTop * 7 / 4 - 60;
+    let iniTop = Math.random() * heightRate;
+    if(iniTop < 70) iniTop /= 2;
+    else iniTop = iniTop / 2 + 50;
     const width = (10 + Math.random() * 6);
     const height = (10 + Math.random() * 6);
     const maxRate = (width / documentWidth > height / documentHeight ? width / documentWidth : height / documentHeight) * 100;
@@ -49,32 +46,28 @@ function Petal(props) {
       left = Math.random()*90 - margin;
       finalLeft = left;
       const speedOption = Math.random();
+
+      let minusVal;
       if(speedOption < 1/3)
       {
         finalLeft += 150;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin) / 150 * 100;
-          finalLeft = 100 - margin;
-        }
+        minusVal = (finalLeft - 100 + margin) / 150 * 100;
       }
       else if(speedOption < 2/3)
       {
         finalLeft += 100;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin);
-          finalLeft = 100 - margin;
-        }
+        minusVal = (finalLeft - 100 + margin);
       }
       else
       {
         finalLeft += 50;
-        if(finalLeft > 100 - margin)
-        {
-          finalBottom -= (finalLeft - 100 + margin) * 2;
-          finalLeft = 100 - margin;
-        }
+        minusVal = (finalLeft - 100 + margin) * 2;
+      }
+
+      if(finalLeft > 100 - margin)
+      {
+        finalBottom -= minusVal // 각도 유지를 하면서 떨어지게 하기 위함
+        finalLeft = 100 - margin;
       }
     }
     else  // 왼쪽방향
@@ -82,32 +75,28 @@ function Petal(props) {
       left = Math.random()*90 + 10 - margin;
       finalLeft = left;
       const speedOption = Math.random();
+      
+      let plusVal;
       if(speedOption < 1/3)
       {
         finalLeft -= 150;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft / 150 * 100;
-          finalLeft = 0;
-        }
+        plusVal = finalLeft / 150 * 100;
       }
       else if(speedOption < 2/3)
       {
         finalLeft -= 100;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft;
-          finalLeft = 0;
-        }
+        plusVal = finalLeft;
       }
       else
       {
         finalLeft -= 50;
-        if(finalLeft < 0)
-        {
-          finalBottom += finalLeft * 2;
-          finalLeft = 0;
-        }
+        plusVal = finalLeft * 2;
+      }
+
+      if(finalLeft < 0)
+      {
+        finalBottom += plusVal; // 각도 유지를 하면서 떨어지게 하기 위함
+        finalLeft = 0;
       }
     }
 
@@ -119,9 +108,9 @@ function Petal(props) {
         top: ${top}%;
         left: ${left}%;
         transform: rotate(${startTheta}deg);
-        opacity: 0;
+        opacity: 0.5;
       }
-      3% {
+      1% {
         opacity: 0.9;
       }
       40% {
@@ -138,7 +127,7 @@ function Petal(props) {
       }
     `;
 
-    const animationDelay = `${(Math.random() * 100).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
+    const animationDelay = `${(Math.random() * 16).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
 
     const PetalImg = styled.img`
       animation-name: ${newPetalAnimation};
@@ -160,7 +149,7 @@ function Petal(props) {
 function DrawPetals() {
 
   return(
-    <Petal count={100}></Petal> 
+    <Petal count={100}></Petal> // 개수가 너무 많으면 Out of Memory
   );
 }
 

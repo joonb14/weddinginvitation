@@ -25,15 +25,18 @@ function Petal(props) {
   const count = props.count;
   let petals = [];
 
+  const browserHeight = document.documentElement.clientHeight;
   const documentWidth = document.documentElement.scrollWidth;
   const documentHeight = document.documentElement.scrollHeight;
   console.log("documentWidth: "+documentWidth);
   console.log("documentHeight: "+documentHeight);
 
+  const heightRate = documentHeight / browserHeight * 100;
+console.log(heightRate)
   for(let i = 0; i < count; i++) {
-    let iniTop = Math.random() * 100;
-    if(iniTop < 40) iniTop /= 4;
-    else if (iniTop < 80) iniTop = iniTop * 7 / 4 - 60;
+    let iniTop = Math.random() * heightRate;
+    if(iniTop < 70) iniTop /= 2;
+    else iniTop = iniTop / 2 + 50;
     const width = (10 + Math.random() * 6);
     const height = (10 + Math.random() * 6);
     const maxRate = (width / documentWidth > height / documentHeight ? width / documentWidth : height / documentHeight) * 100;
@@ -50,11 +53,33 @@ function Petal(props) {
       finalLeft = left;
       const speedOption = Math.random();
 
-      if(speedOption < 1/3) finalLeft += 150;
-      else if(speedOption < 2/3) finalLeft += 100;
-      else finalLeft += 50;
-
-      if(finalLeft > 100 - margin) finalLeft = 100 - margin;
+      if(speedOption < 1/3)
+      {
+        finalLeft += 150;
+        if(finalLeft > 100 - margin)
+        {
+          finalBottom -= (finalLeft - 100 + margin) / 150 * 100;
+          finalLeft = 100 - margin;
+        }
+      }
+      else if(speedOption < 2/3)
+      {
+        finalLeft += 100;
+        if(finalLeft > 100 - margin)
+        {
+          finalBottom -= (finalLeft - 100 + margin);
+          finalLeft = 100 - margin;
+        }
+      }
+      else
+      {
+        finalLeft += 50;
+        if(finalLeft > 100 - margin)
+        {
+          finalBottom -= (finalLeft - 100 + margin) * 2;
+          finalLeft = 100 - margin;
+        }
+      }
     }
     else  // 왼쪽방향
     {
@@ -62,14 +87,34 @@ function Petal(props) {
       finalLeft = left;
       const speedOption = Math.random();
       
-      if(speedOption < 1/3) finalLeft -= 150;
-      else if(speedOption < 2/3) finalLeft -= 100;
-      else finalLeft -= 50;
-
-      if(finalLeft < 0) finalLeft = 0;
+      if(speedOption < 1/3)
+      {
+        finalLeft -= 150;
+        if(finalLeft < 0)
+        {
+          finalBottom += finalLeft / 150 * 100;
+          finalLeft = 0;
+        }
+      }
+      else if(speedOption < 2/3)
+      {
+        finalLeft -= 100;
+        if(finalLeft < 0)
+        {
+          finalBottom += finalLeft;
+          finalLeft = 0;
+        }
+      }
+      else
+      {
+        finalLeft -= 50;
+        if(finalLeft < 0)
+        {
+          finalBottom += finalLeft * 2;
+          finalLeft = 0;
+        }
+      }
     }
-
-    finalBottom = documentHeight;
 
     const startTheta = Math.random() * 100 - 5;
     const middleTheta = Math.random() * 109 + 28;
@@ -92,17 +137,17 @@ function Petal(props) {
       }
       100% {
         left: ${finalLeft}%;
-        top: ${finalBottom}px;
+        top: ${finalBottom}%;
         transform: rotate(${endTheta}deg);
         opacity: 0.1;
       }
     `;
 
-    const animationDelay = `${(Math.random() * 100).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
+    const animationDelay = `${(Math.random() * 16).toFixed(2)}s`; // 0~16 사이에서 소수점 2번째 자리수까지의 랜덤숫자
 
     const PetalImg = styled.img`
       animation-name: ${newPetalAnimation};
-      animation-duration: ${(finalBottom - iniTop) / 300}s;
+      animation-duration: ${(finalBottom - iniTop) / 3}s;
       animation-delay: ${animationDelay};
       animation-iteration-count: infinite;
       animation-timing-function: linear;

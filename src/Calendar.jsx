@@ -4,10 +4,9 @@ import 'react-calendar/dist/Calendar.css';
 import "./assets/styleForCalendar.css";
 
 function Calendar() {
-  const weddingDay = useState(new Date(2023, 5 - 1, 27));
-  const weddingDay2 = new Date("2023-05-27");
+  const weddingDay = new Date("2023-05-27");
   const today = new Date();
-  const diff = weddingDay2.getTime() - today.getTime();
+  const diff = weddingDay.getTime() - today.getTime();
   const diffDay = Math.floor(diff / (1000*60*60*24));
 
   return (

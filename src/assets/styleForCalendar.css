@@ -1,0 +1,41 @@
+.react-calendar__navigation {
+    display: none;
+    visibility: hidden;
+}
+
+.react-calendar__tile--hasActive {
+    background: #fbe4c8;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.react-calendar {
+    width: 350px;
+    max-width: 100%;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    outline: none;
+}
+
+.april {
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+
+td, th {
+    padding: 10px;
+}
+
+th:nth-child(1),td:nth-child(1){
+    color: red;
+}
+
+.weddingDay {
+    background: red;
+    border-radius: 20px;
+}
+

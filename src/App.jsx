@@ -4,6 +4,7 @@ import SvgContent from './SvgContent';
 import Gallery from './Gallery';
 import PetalBlowing from './PetalBlowing';
 import Header from './TextAnimation';
+import Calendar from './Calendar'
 
 import './assets/reset.css';
 import './assets/style.css';
@@ -12,15 +13,6 @@ import './assets/style.css';
 function Map() {
   return (
     <div className="Map">
-
-    </div>
-  );
-}
-
-/* @ */
-function Calendar() {
-  return (
-    <div className="Calendar">
 
     </div>
   );

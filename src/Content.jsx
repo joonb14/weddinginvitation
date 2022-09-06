@@ -27,24 +27,24 @@ function Information(props){
   return (
     <div className="Information">
       <div>
-        김민수 · 김예인
+        박종훈 · 김소연
         <span className="smallFont">
           의 
           <span className="textBox">
             아들
           </span>
         </span>
-        현수
+        준범
       </div>
       <div>
-        김민우 · 황선영
+        이윤석 · 김서경
         <span className="smallFont">
           의 
           <span className="textBox">
             딸
           </span>
         </span>
-        아연
+        민정
       </div>
     </div>
   );

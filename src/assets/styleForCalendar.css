@@ -20,8 +20,18 @@ button {
     outline: none;
 }
 
-.april {
+.calendar {
+    margin-top: 3vh;
     text-align: center;
+}
+
+.dateString {
+    font-size: 2vw;
+}
+
+.april {
+    margin-top: 1vh;
+    font-size: 2vw;
     display: inline-block;
     overflow: hidden;
 }

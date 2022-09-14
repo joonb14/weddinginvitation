@@ -1,7 +1,7 @@
 import React from 'react';
 // import MyCalendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import "./assets/styleForCalendar.css";
+import "./assets/style/calendar.css";
 
 function TableCalendar() {
   return (

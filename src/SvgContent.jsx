@@ -1,13 +1,12 @@
 import React, { useEffect, useContext } from 'react';
 
 import { Context } from './Context';
-import Content from './Content'
 
-import { ReactComponent as Svg1 } from './assets/wedding.svg';
-import { ReactComponent as Svg2 } from './assets/content2.svg';
+import { ReactComponent as Svg1 } from './assets/svg/wedding.svg';
+import { ReactComponent as Svg2 } from './assets/svg/content2.svg';
 
-import './assets/style.css';
-import './assets/reset.css';
+import './assets/style/reset.css';
+import './assets/style/content.css';
 
 
 /* @joonb14 */
@@ -25,7 +24,6 @@ function SvgContents(props){
       <div className="svg1">
         <Svg1></Svg1>
       </div>
-      <Content></Content>
       <div className="svg2">
         <Svg2></Svg2>
       </div>

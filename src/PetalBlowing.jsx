@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client'
 import styled, {keyframes} from "styled-components"
 
-import './assets/snow.css';
-import petalImg from './assets/petal.png'
+import './assets/style/snow.css';
+import petalImg from './assets/img/petal.png'
 
 function Snowflake(props) {
   return(

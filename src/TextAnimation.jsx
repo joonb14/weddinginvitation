@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 
-import './assets/reset.css';
-import './assets/textanimation.css';
+import './assets/style/reset.css';
+import './assets/style/textanimation.css';
 
-import { ReactComponent as TextSVG } from './assets/textanimation.svg';
+import { ReactComponent as TextSVG } from './assets/svg/textanimation.svg';
 
 /* @bravoyourlif */
 function HeaderContent(props) {

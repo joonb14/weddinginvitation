@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .svg1 {
-  background-image: url("./wedding.jpeg");
+  background-image: url("../img/wedding.jpeg");
   overflow: auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -16,7 +16,10 @@
 }
 
 .svg2 {
-  background-color: #f1f1f1;
+  background-image: url("../img/content.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 .path2 {

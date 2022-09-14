@@ -1,5 +1,5 @@
 import ImageGallery from 'react-image-gallery';
-import "./assets/styleForGallery.css";
+import "./assets/style/gallery.css";
 
 //import sample1 from "./assets/img/sample1.png";
 import sample2 from "./assets/img/sample2.png";

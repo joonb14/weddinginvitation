@@ -1,6 +1,6 @@
 import React from "react";
 import RGL, { WidthProvider } from "react-grid-layout";
-import "./assets/grid.css"
+import "./assets/style/grid.css"
 
 const ReactGridLayout = WidthProvider(RGL);
 

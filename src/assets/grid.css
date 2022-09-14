@@ -1,0 +1,29 @@
+.grids {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.a {
+    background-image: url("./img/sample1.png");
+}
+
+.b {
+    background-image: url("./img/sample2.png");
+}
+
+.c {
+    background-image: url("./img/sample3.png");
+}
+
+.d {
+    background-image: url("./img/sample4.png");
+}
+
+.e {
+    background-image: url("./img/sample5.png");
+}
+
+.f {
+    background-image: url("./img/sample6.png");
+}
